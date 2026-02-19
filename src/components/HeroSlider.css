@@ -1,0 +1,125 @@
+.hero {
+  position: relative;
+  height: 85vh;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+/* Blur background */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: blur(25px);
+  transform: scale(1.2);
+  z-index: -1;
+}
+.hero-section{
+    padding:0;
+}
+
+.hero-section .splide{
+  padding:0 !important;
+}
+.hero-content {
+  position: absolute;
+  bottom: 80px;
+  left: 60px;
+  max-width: 500px;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 60px;
+  margin-bottom: 10px;
+  color: #ddd;
+}
+
+.hero-content p {
+  color: #ddd;
+}
+
+.hero-btn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border-radius: 30px;
+  background: #e50914;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: .3s;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+}
+
+.hero-btn:hover {
+  transform: scale(1.1);
+}
+
+@media(max-width:768px) {
+
+  .hero {
+    height: 55vh;
+  }
+
+  .hero-content {
+    left: 15px;
+    bottom: 15px;
+    max-width: 90%;
+  }
+
+  .hero-content h1 {
+    font-size: 24px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .hero-btn {
+    padding: 8px 18px;
+    font-size: 14px;
+  }
+}
+
+/* Normal dots */
+.splide__pagination__page {
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Active dot = Button color */
+.splide__pagination__page.is-active {
+  background: #ff0000;
+  transform: scale(1.4);
+}
+
+.genre {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 6px 16px;
+  border-radius: 30px;
+  background: linear-gradient(45deg, #ff0000, #7a0000);
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  transition: 0.3s;
+}

@@ -1,0 +1,189 @@
+.modern-card{
+  border-radius:25px;
+  overflow:hidden;
+  background:linear-gradient(140deg,#000000,#140000);
+  transition:0.4s;
+  box-shadow:0 10px 25px rgba(0,0,0,0.7);
+}
+
+/* Hover Lift */
+.modern-card:hover{
+  transform:translateY(-15px) scale(1.03);
+  box-shadow:0 25px 60px rgba(255,0,0,0.35);
+}
+
+/* Image */
+.card-img img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  transition:0.5s;
+}
+
+.modern-card:hover img{
+  /* transform:scale(1.08); */
+}
+
+/* Bottom Box */
+.card-info{
+  background:#050000;
+  padding:18px;
+  color:white;
+  border-top:1px solid rgba(255,0,0,0.2);
+}
+
+.card-info h3{
+  margin-bottom:12px;
+  font-size:19px;
+}
+
+/* Tags */
+.tags{
+  display:flex;
+  gap:10px;
+}
+
+.tags span{
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:13px;
+  font-weight:600;
+}
+
+/* Rating Chip */
+.rating{
+  background:linear-gradient(120deg,#ff0000,#8b0000);
+  color:white;
+}
+
+/* Type Chip */
+.type{
+  border:1px solid #ff0000;
+  color:#ff4d4d;
+}
+.modern-card{
+  border-radius:25px;
+  overflow:hidden;
+  background:linear-gradient(140deg,#000000,#140000);
+  transition:0.4s;
+  box-shadow:0 10px 25px rgba(0,0,0,0.7);
+}
+
+/* Hover Lift */
+.modern-card:hover{
+  transform:translateY(-15px) scale(1.03);
+  box-shadow:0 25px 60px rgba(255,0,0,0.35);
+}
+
+/* Image */
+.card-img img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  transition:0.5s;
+}
+
+.modern-card:hover img{
+  /* transform:scale(1.08); */
+}
+
+/* Bottom Box */
+.card-info{
+  background:#050000;
+  padding:18px;
+  color:white;
+  border-top:1px solid rgba(255,0,0,0.2);
+}
+
+.card-info h3{
+  margin-bottom:12px;
+  font-size:19px;
+}
+
+/* Tags */
+.tags{
+  display:flex;
+  gap:10px;
+}
+
+.tags span{
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:13px;
+  font-weight:600;
+}
+
+/* Rating Chip */
+.rating{
+  background:linear-gradient(120deg,#ff0000,#8b0000);
+  color:white;
+}
+
+/* Type Chip */
+.type{
+  border:1px solid #ff0000;
+  color:#ff4d4d;
+}
+.modern-card{
+  border-radius:25px;
+  overflow:hidden;
+  background:linear-gradient(140deg,#000000,#140000);
+  transition:0.4s;
+  box-shadow:0 10px 25px rgba(0,0,0,0.7);
+}
+
+/* Hover Lift */
+.modern-card:hover{
+  transform:translateY(-15px) scale(1.03);
+  box-shadow:0 25px 60px rgba(255,0,0,0.35);
+}
+
+/* Image */
+.card-img img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  transition:0.5s;
+}
+
+.modern-card:hover img{
+  /* transform:scale(1.08); */
+}
+
+/* Bottom Box */
+.card-info{
+  background:#050000;
+  padding:18px;
+  color:white;
+  border-top:1px solid rgba(255,0,0,0.2);
+}
+
+.card-info h3{
+  margin-bottom:12px;
+  font-size:19px;
+}
+
+/* Tags */
+.tags{
+  display:flex;
+  gap:10px;
+}
+
+.tags span{
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:13px;
+  font-weight:600;
+}
+
+/* Rating */
+.rating{
+  background:linear-gradient(120deg,#ff0000,#8b0000);
+  color:white;
+}
+
+/* Type Chip */
+.type{
+  border:1px solid #ff0000;
+  color:#ff4d4d;
+}
