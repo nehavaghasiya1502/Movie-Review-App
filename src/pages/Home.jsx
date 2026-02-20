@@ -22,9 +22,12 @@ function Home() {
 
       <HeroSlider shows={shows.slice(0, 5)} />
       <div className="home-dark-section">
-        <MovieRow title="🔥 Popular Shows" movies={shows.slice(10, 30)} />
+        {/* <MovieRow title="🔥 Popular Shows" movies={shows.slice(10, 30)} />
         <MovieRow title="⭐ Top Rated Shows" movies={shows.slice(30, 50)} />
-        <MovieRow title="😂 Comedy Shows" movies={shows.slice(50, 70)} />
+        <MovieRow title="😂 Comedy Shows" movies={shows.slice(50, 70)} /> */}
+        <MovieRow title=" Popular Shows" movies={shows.slice(10, 30)} />
+        <MovieRow title=" Top Rated Shows" movies={shows.slice(30, 50)} />
+        <MovieRow title=" Comedy Shows" movies={shows.slice(50, 70)} />
       </div>
     </div>
   );
