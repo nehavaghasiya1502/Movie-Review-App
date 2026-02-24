@@ -44,6 +44,9 @@ h2 {
   overflow: hidden;
   text-align: center;
   transition: transform 0.3s;
+  text-decoration: none;
+  color: white;
+  display: block;
 }
 
 .show-card:hover {
@@ -65,4 +68,19 @@ h2 {
   margin-bottom: 10px;
   color: #ffcccc;
   font-size: 0.9rem;
+}
+/* ================= ANIMATION ================= */
+.show-up {
+  animation: slowUp 0.8s ease forwards;
+}
+
+@keyframes slowUp {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

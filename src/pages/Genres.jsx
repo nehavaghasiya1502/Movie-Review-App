@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./Pages.css";
+import { Link } from "react-router-dom";
 
 function Genres() {
   const [shows, setShows] = useState([]);
@@ -32,13 +33,17 @@ function Genres() {
         ))}
       </div>
 
-      <div className="shows-grid">
+      <div className="shows-grid show-up">
         {filteredShows.map(show => (
-          <div key={show.id} className="show-card">
+          <Link
+            key={show.id}
+            to={`/movie/${show.id}`}
+            className="show-card"
+          >
             <img src={show.image?.medium} alt={show.name} />
             <h4>{show.name}</h4>
-            <p>Rating: {show.rating.average || "N/A"}</p>
-          </div>
+            <p>Rating: {show.rating?.average || "N/A"}</p>
+          </Link>
         ))}
       </div>
     </div>

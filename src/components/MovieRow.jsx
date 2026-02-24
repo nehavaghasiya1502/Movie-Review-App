@@ -12,10 +12,10 @@ function MovieRow({ title, movies = [] }) {
         options={{
           perPage: 5,
           gap: "20px",
-          autoplay: false,
           interval: 2000,
           pauseOnHover: true,
           arrows: true,
+          autoplay: true,
           pagination: false,
           breakpoints: {
             1024: { perPage: 4 },

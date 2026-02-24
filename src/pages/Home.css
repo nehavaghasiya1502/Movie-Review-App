@@ -41,3 +41,12 @@
     gap:12px;
   }
 }
+.show-card {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+.show-card-link {
+  text-decoration: none;
+  color: white;
+}

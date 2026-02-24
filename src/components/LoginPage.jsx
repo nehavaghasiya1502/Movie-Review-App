@@ -63,7 +63,7 @@ function LoginPage() {
 
   return (
     <div className="login-overlay">
-      <div className="login-box">
+      <div className="login-box  show-up">
 
         <h2>🎬 ShowFlix {isForgot ? "Reset Password" : isRegister ? "Register" : "Login"}</h2>
         <p className="subtitle">Review • Rate • Enjoy Movies</p>

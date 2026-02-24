@@ -6,7 +6,7 @@ function MovieCard({ movie }) {
   if (!movie) return null;
 
   return (
-    <Link to={`/movie/${movie.id}`} className="modern-card">
+    <Link to={`/movie/${movie.id}`} className="modern-card show-up">
 
       <div className="card-img">
         <img

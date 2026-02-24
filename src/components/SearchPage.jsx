@@ -41,8 +41,8 @@ function SearchPage() {
     activeCategory === "popular"
       ? popular
       : activeCategory === "top"
-      ? topRated
-      : comedy;
+        ? topRated
+        : comedy;
 
   // 🔹 TYPE FILTER
   const filteredData = currentData.filter(show =>
@@ -59,13 +59,32 @@ function SearchPage() {
     <div className="search-page">
 
       {/* SEARCH */}
-      <input
+      {/* <input
         type="text"
         placeholder="Search shows..."
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         className="search-input"
-      />
+      /> */}
+      <div className="search-box">
+  <input
+    type="text"
+    placeholder="Search shows..."
+    value={query}
+    onChange={(e) => setQuery(e.target.value)}
+    className="search-input"
+  />
+
+  {query.length > 0 && (
+    <button
+      className="clear-btn"
+      onClick={() => setQuery("")}
+      type="button"
+    >
+      ✖
+    </button>
+  )}
+</div>
 
       {/* CATEGORY BUTTONS */}
       <div className="category-buttons">

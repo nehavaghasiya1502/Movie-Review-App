@@ -16,6 +16,7 @@ import Trending from "./pages/Trending";
 import TopRated from "./pages/TopRated";
 import Genres from "./pages/Genres";
 import Watchlist from "./pages/Watchlist";
+import Footer from "./components/Footer";
 
 function AppContent() {
   const location = useLocation();
@@ -36,6 +37,8 @@ function AppContent() {
         <Route path="/genres" element={<Genres />} />
         <Route path="/watchlist" element={<Watchlist />} />
       </Routes>
+      
+      {location.pathname !== "/login" && <Footer />}
     </>
   );
 }
