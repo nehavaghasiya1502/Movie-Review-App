@@ -13,7 +13,7 @@ function LoginPage() {
 
   const navigate = useNavigate();
 
-  // ================= LOGIN / REGISTER =================
+  // LOGIN / REGISTER
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -43,7 +43,7 @@ function LoginPage() {
     }
   };
 
-  // ================= FORGOT PASSWORD =================
+  // FORGOT PASSWORD
   const handleForgot = (e) => {
     e.preventDefault();
 
@@ -68,7 +68,7 @@ function LoginPage() {
         <h2>🎬 ShowFlix {isForgot ? "Reset Password" : isRegister ? "Register" : "Login"}</h2>
         <p className="subtitle">Review • Rate • Enjoy Movies</p>
 
-        {/* ================= NORMAL LOGIN / REGISTER ================= */}
+        {/* LOGIN / REGISTER */}
         {!isForgot ? (
 
           <form onSubmit={handleSubmit}>
@@ -93,7 +93,7 @@ function LoginPage() {
 
         ) : (
 
-          /* ================= FORGOT PASSWORD ================= */
+          /* FORGOT PASSWORD */
           <form onSubmit={handleForgot}>
             <input
               type="email"
@@ -113,7 +113,7 @@ function LoginPage() {
           </form>
         )}
 
-        {/* ================= TOGGLE ================= */}
+        {/* TOGGLE */}
         {!isForgot && (
           <p
             className="toggle-btn"
@@ -125,7 +125,7 @@ function LoginPage() {
           </p>
         )}
 
-        {/* ================= FORGOT ================= */}
+        {/* FORGOT */}
         {!isForgot && (
           <p
             className="forgot-btn"
@@ -144,7 +144,7 @@ function LoginPage() {
           </p>
         )}
 
-        {/* ================= GUEST ================= */}
+        {/* GUEST */}
         <button
           className="guest-btn"
           onClick={() => navigate("/")}

@@ -29,10 +29,6 @@ background: linear-gradient(
   letter-spacing:1px;
   transition:.3s;
 }
-/* 
-.nav-logo:hover{
-  transform:scale(1.08);
-} */
 
 /* Links */
 .nav-links{

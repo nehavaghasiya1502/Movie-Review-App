@@ -12,7 +12,7 @@ function SearchPage() {
   const [showType] = useState("All");
   const [animate, setAnimate] = useState(false);
 
-  // 🔹 SEARCH
+  //  SEARCH
   useEffect(() => {
     if (query.length < 2) {
       setResults([]);

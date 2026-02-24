@@ -16,8 +16,8 @@
   margin-bottom:30px;
   font-size:16px;
 
-  background:black;      /* black background */
-  color:white;           /* text white */
+  background:black;     
+  color:white;          
   outline:none;
   transition:0.3s;
 }
@@ -88,11 +88,6 @@
 
 @media(max-width:600px){
   .poster-row{ grid-template-columns:repeat(2,1fr); }
-}
-
-.poster-row {
-  opacity: 0;
-  transform: translateY(120px);
 }
 
 .show-up {
