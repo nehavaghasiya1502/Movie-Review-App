@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
+import { FaTrash } from "react-icons/fa";
 import "./Pages.css";
+import { Link } from "react-router-dom";
 
 function Watchlist() {
   const [watchlist, setWatchlist] = useState([]);
@@ -9,21 +11,60 @@ function Watchlist() {
     setWatchlist(savedList);
   }, []);
 
+  const removeItem = (id) => {
+    const updated = watchlist.filter(item => item.id !== id);
+    setWatchlist(updated);
+    localStorage.setItem("watchlist", JSON.stringify(updated));
+  };
+
   return (
-    <div className="page-container">
-      <h2>My Watchlist</h2>
+    <div className="watchlist-container">
+      <h2 className="watchlist-title show-up">My Watchlist</h2>
+
       {watchlist.length === 0 ? (
-        <p>Your watchlist is empty!</p>
+        <p className="empty-msg">Your watchlist is empty!</p>
       ) : (
-        <div className="shows-grid">
+        <div className="watchlist-list show-up">
           {watchlist.map(show => (
-            <div key={show.id} className="show-card">
-              <img src={show.image} alt={show.name} />
-              <h4>{show.name}</h4>
-              <p>Rating: {show.rating || "N/A"}</p>
-            </div>
+            <Link
+              key={show.id}
+              to={`/movie/${show.id}`}
+              className="watchlist-row"
+            >
+
+              {/* LEFT IMAGE */}
+              <div className="watchlist-img">
+                <img
+                  src={
+                    show.image?.medium ||
+                    "https://via.placeholder.com/150x200?text=No+Image"
+                  }
+                  alt={show.name}
+                />
+              </div>
+
+              {/* CENTER DETAILS */}
+              <div className="watchlist-info">
+                <h3>{show.name}</h3>
+                <p>⭐ {show.rating?.average || "N/A"}</p>
+                <p>{show.language}</p>
+              </div>
+
+              {/* RIGHT REMOVE ICON */}
+              <div
+                className="watchlist-remove"
+                onClick={(e) => {
+                  e.preventDefault();   // link open na ho
+                  removeItem(show.id);
+                }}
+              >
+                <FaTrash />
+              </div>
+
+            </Link>
           ))}
         </div>
+
       )}
     </div>
   );

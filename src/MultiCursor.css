@@ -1,0 +1,31 @@
+/* MultiCursor.css
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+}
+
+.cursor-main {
+  background-color: #ff0000;
+}
+
+.cursor-follower {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 0, 0, 0.5);
+} */
+ /* HeavyCursor.css */
+/* MultiCursor.css */
+.single-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+}

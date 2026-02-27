@@ -20,8 +20,8 @@ function Genres() {
 
   return (
     <div className="page-container">
-      <h2>Shows by Genre</h2>
-      <div className="genre-buttons">
+      <h2 className="show-up">Shows by Genre</h2>
+      <div className="genre-buttons show-up">
         {genres.map(genre => (
           <button
             key={genre}
@@ -38,7 +38,7 @@ function Genres() {
           <Link
             key={show.id}
             to={`/movie/${show.id}`}
-            className="show-card"
+            className="show-card show-up"
           >
             <img src={show.image?.medium} alt={show.name} />
             <h4>{show.name}</h4>

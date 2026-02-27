@@ -14,35 +14,65 @@ function LoginPage() {
   const navigate = useNavigate();
 
   // LOGIN / REGISTER
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
 
-    if (!email || !password) {
-      alert("Please fill all fields");
-      return;
-    }
+  //   if (!email || !password) {
+  //     alert("Please fill all fields");
+  //     return;
+  //   }
 
-    if (isRegister) {
-      localStorage.setItem("userEmail", email);
-      localStorage.setItem("userPassword", password);
-      alert("Register Successful 🎉");
-      setIsRegister(false);
-      setEmail("");
-      setPassword("");
+  //   if (isRegister) {
+  //     localStorage.setItem("userEmail", email);
+  //     localStorage.setItem("userPassword", password);
+  //     alert("Register Successful 🎉");
+  //     setIsRegister(false);
+  //     setEmail("");
+  //     setPassword("");
+  //   } else {
+  //     const savedEmail = localStorage.getItem("userEmail");
+  //     const savedPass = localStorage.getItem("userPassword");
+
+  //     if (email === savedEmail && password === savedPass) {
+  //       localStorage.setItem("isLoggedIn", "true");
+  //       alert("Login Successful 🎉");
+  //       navigate("/");
+  //     } else {
+  //       alert("Wrong email or password ❌");
+  //     }
+  //   }
+  // };
+
+  // LOGIN / REGISTER
+const handleSubmit = (e) => {
+  e.preventDefault();
+
+  if (!email || !password) {
+    alert("Please fill all fields");
+    return;
+  }
+
+  if (isRegister) {
+    localStorage.setItem("userEmail", email);
+    localStorage.setItem("userPassword", password);
+    alert("Register Successful 🎉");
+    setIsRegister(false);
+    setEmail("");
+    setPassword("");
+  } else {
+    const savedEmail = localStorage.getItem("userEmail");
+    const savedPass = localStorage.getItem("userPassword");
+
+    if (email === savedEmail && password === savedPass) {
+      // ✅ LOGIN USER SAVE
+      localStorage.setItem("user", JSON.stringify({ email }));
+      alert("Login Successful 🎉");
+      navigate("/");
     } else {
-      const savedEmail = localStorage.getItem("userEmail");
-      const savedPass = localStorage.getItem("userPassword");
-
-      if (email === savedEmail && password === savedPass) {
-        localStorage.setItem("isLoggedIn", "true");
-        alert("Login Successful 🎉");
-        navigate("/");
-      } else {
-        alert("Wrong email or password ❌");
-      }
+      alert("Wrong email or password ❌");
     }
-  };
-
+  }
+};
   // FORGOT PASSWORD
   const handleForgot = (e) => {
     e.preventDefault();
@@ -145,13 +175,22 @@ function LoginPage() {
         )}
 
         {/* GUEST */}
-        <button
+        {/* <button
           className="guest-btn"
           onClick={() => navigate("/")}
         >
           Continue as Guest 🎬
-        </button>
+        </button> */}
 
+<button
+  className="guest-btn"
+  onClick={() => {
+    localStorage.setItem("user", "guest");
+    navigate("/");
+  }}
+>
+  Continue as Guest 🎬
+</button>
       </div>
     </div>
   );

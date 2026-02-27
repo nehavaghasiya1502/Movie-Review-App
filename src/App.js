@@ -17,12 +17,17 @@ import TopRated from "./pages/TopRated";
 import Genres from "./pages/Genres";
 import Watchlist from "./pages/Watchlist";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
+import MultiCursor from "./MultiCursor";
+
 
 function AppContent() {
   const location = useLocation();
 
   return (
     <>
+    <MultiCursor />
+     <ScrollToTop />
       {location.pathname !== "/login" && <Navbar />}
 
       <Routes>

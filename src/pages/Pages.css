@@ -84,3 +84,167 @@ h2 {
     transform: translateY(0);
   }
 }
+
+@media (max-width: 1200px) {
+  .shows-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .shows-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .shows-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .shows-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+/* Background Gradient Glow */
+.watchlist-container {
+  padding: 30px;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #3b0000, #000000 70%);
+}
+
+/* Grid Layout */
+.watchlist-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+/* Title */
+.watchlist-title {
+  color: #ff2e2e;
+  margin-bottom: 25px;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+.watchlist-row{
+  text-decoration:none;
+  color:white;
+}
+/* Card Style */
+.watchlist-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px;
+  border-radius: 14px;
+
+  background: linear-gradient(120deg, rgba(40,0,0,0.7), rgba(0,0,0,0.8));
+  backdrop-filter: blur(8px);
+
+  border: 1px solid rgba(255,0,0,0.4);
+  box-shadow: 0 8px 25px rgba(255,0,0,0.15);
+
+  transition: all 0.35s ease;
+}
+
+/* Hover Effect */
+.watchlist-row:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(255,0,0,0.45);
+}
+
+/* Image */
+.watchlist-img img {
+  width: 120px;
+  height: 165px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+
+.watchlist-row:hover .watchlist-img img {
+  transform: scale(1.05);
+}
+
+/* Info */
+.watchlist-info {
+  flex: 1;
+  margin-left: 20px;
+  color: white;
+}
+
+.watchlist-info h3 {
+  color: #ff3b3b;
+  margin-bottom: 8px;
+}
+
+.watchlist-info p {
+  color: #ccc;
+  font-size: 14px;
+}
+
+/* Remove Icon */
+.watchlist-remove {
+  font-size: 24px;
+  color: #ff2e2e;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.watchlist-remove:hover {
+  color: white;
+  transform: rotate(15deg) scale(1.3);
+}
+
+/* Empty Message */
+.empty-msg {
+  color: gray;
+  font-size: 18px;
+}
+@media (max-width: 768px) {
+
+  .watchlist-list {
+    grid-template-columns: 1fr;   /* 2 column se 1 column */
+  }
+
+  .watchlist-row {
+    padding: 15px;
+  }
+
+  .watchlist-img img {
+    width: 100px;
+    height: 140px;
+  }
+
+  .watchlist-info h3 {
+    font-size: 18px;
+  }
+
+}
+@media (max-width: 500px){
+
+  .watchlist-row{
+    flex-direction: column;
+    align-items: center;     /* image center */
+    text-align: center;
+  }
+
+  .watchlist-img img{
+    width: 70%;
+    height: auto;
+    margin: auto;
+  }
+
+  .watchlist-info{
+    margin-left: 0;
+  }
+
+  .watchlist-remove{
+    align-self: center;   /* icon left side */
+    margin-top: 10px;
+  }
+
+}
